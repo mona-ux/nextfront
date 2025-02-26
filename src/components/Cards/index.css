@@ -1,0 +1,58 @@
+.cards-container {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 3rem;
+  margin-left: 7rem;
+  margin-right: 7rem;
+}
+
+.card {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.discount-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: orange;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.days-remaining {
+  font-size: 14px;
+  color: red;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-left: -5.5rem;
+background-color: #F1722833;
+padding: 1rem;
+border-radius: 1rem;
+}
+ 
+
+ 

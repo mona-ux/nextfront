@@ -1,0 +1,71 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #f5f4f1;
+    font-family: Arial, sans-serif;
+  }
+  
+   
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 6rem;
+  }
+  
+ 
+  .delivery-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .deliver-to {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .location {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff6600;
+  }
+  
+  .address {
+    font-size: 14px;
+    color: #666;
+  }
+  
+   
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+  }
+  
+  .search-box {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    width: 140px;
+     
+  }
+  ::placeholder {
+    color: red;
+  
+  }
+  
+  .login-btn {
+    background: #faf8f6;
+    color: #FFB800;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 6rem;
+  }
+  

@@ -1,0 +1,43 @@
+.how-it-works {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+    margin-top: 1rem;
+  }
+  
+  .section-title {
+    margin-top: 1rem;
+    font-size: 32px;
+    font-weight: bold;
+    color: #F17228;
+    margin-bottom: 30px;
+  }
+  
+  .steps-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 3rem;
+  }
+  
+  .step-card {
+    text-align: center;
+    max-width: 200px;
+  }
+  
+  .step-card img {
+     
+    margin-bottom: 2rem;
+  }
+  
+  .step-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .step-card p {
+    font-size: 14px;
+    color: #666;
+  }
+  
