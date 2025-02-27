@@ -1,111 +1,199 @@
 .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    background: #FFB800;
-    font-family: Arial, sans-serif;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background: #FFB800;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Hero Content */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+/* Hero Text */
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Hero Title */
+.hero-title {
+  font-size: 42px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* Hero Description */
+.hero-description {
+  font-size: 18px;
+  color: rgb(12, 11, 11);
+  margin-bottom: 25px;
+}
+
+/* Delivery Box */
+.delivery-box {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  width: 580px;
+  max-width: 100%;
+}
+
+/* Delivery Options */
+.delivery-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* Delivery Option */
+.option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #666;
+}
+
+.option.active {
+  background: #fffefd;
+  color: #ff6600;
+}
+
+/* Input Container */
+.input-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Delivery Input */
+.delivery-input {
+  padding: 12px;
+  flex: 1;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Find Food Button */
+.find-food-btn {
+  background: #ff6600;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Hero Image */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-right: -16rem;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
+    flex-direction: column;
+    text-align: center;
   }
-  
- 
-  .hero-text {
-    flex: 1;
-  }
-  
+
   .hero-title {
-    font-size: 42px;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 10px;
+    font-size: 36px;
   }
-  
+
   .hero-description {
-    font-size: 18px;
-    color: rgb(12, 11, 11);
-    margin-bottom: 25px;
-  }
-  
- 
-  .delivery-box {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    width: 580px;
-  }
-  
- 
-  .delivery-options {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    margin-left: 0rem;
-  }
-  
-  .option {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px;
     font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-    color: #666;
   }
-  
-  .option.active {
-    background: #fffefd;
-    color: #ff6600;
+
+  .delivery-box {
+    width: 90%;
   }
-  
-  .icon {
-    font-size: 18px;
+
+  .hero-image {
+    margin: 0;
+    justify-content: center;
   }
-  
- 
-  .input-container {
-    display: flex;
+
+  .hero-image img {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 30px 15px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .delivery-options {
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
   }
-  
-  .delivery-input {
-    padding: 12px;
-    flex: 1;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    margin-left: 1rem;
-  }
-  
-  .find-food-btn {
-    background: #ff6600;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
- 
-  .hero-image {
-    flex: 1;
-    margin-right: -16rem;
-  }
-  .hero-image img {
+
+  .option {
     width: 100%;
-    max-width: 400px;
-     
   }
- 
-  
+
+  .input-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .delivery-input,
+  .find-food-btn {
+    width: 100%;
+  }
+
+  .hero-image img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .delivery-box {
+    width: 100%;
+  }
+
+  .hero-image img {
+    max-width: 250px;
+  }
+}

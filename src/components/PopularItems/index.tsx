@@ -3,24 +3,24 @@ import Image from "next/image";
 export default function PopularItems() {
   return (
     <section className="py-10 px-5">
-      <h2 className="text-2xl font-bold text-center mb-10 mt-2">Popular items</h2>
-      <div className="grid grid-cols-5 gap-0">
+      <h2 className="text-2xl font-bold text-center mb-10 mt-2">Popular Items</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
         {popularItems.map((item, index) => (
           <div
             key={index}
-            className="bg-white shadow-lg rounded-xl overflow-hidden text-center"
+            className="bg-white shadow-lg rounded-xl overflow-hidden text-center p-4"
           >
             <Image
               src={item.image}
               alt={item.name}
               width={200}
               height={200}
-              className="w-full h-40 object-cover ml-9 mr-11"
+              className="w-full h-40 object-cover"
             />
-            <h3 className=" flex justify-center items-left font-bold text-lg mt-3">{item.name}</h3>
+            <h3 className="font-bold text-lg mt-3">{item.name}</h3>
             <p className="text-yellow-600 text-sm">{item.place}</p>
-            <p className="text-l font-bold">${item.price}</p>
-            <button className="bg-orange-500 text-white py-2 px-4 w-60 gap-1 rounded-lg mt-3 ml-6">
+            <p className="text-lg font-bold">${item.price}</p>
+            <button className="bg-orange-500 text-white py-2 px-4 w-3/4 rounded-lg mt-3 hover:bg-orange-600 transition duration-300">
               Order Now
             </button>
           </div>
@@ -58,7 +58,7 @@ const popularItems = [
   {
     image: "/images/fv.png",
     name: "Thai Soup",
-    place: "Foody man",
+    place: "Foody Man",
     price: "2.79",
   },
 ];

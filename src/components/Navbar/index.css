@@ -1,71 +1,143 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background: #f5f4f1;
-    font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #f5f4f1;
+  font-family: Arial, sans-serif;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 6rem;
+}
+
+/* Delivery Info */
+.delivery-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.deliver-to {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.location {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+.address {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Right Navigation */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Search Box */
+.search-box {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  width: 140px;
+}
+
+::placeholder {
+  color: red;
+}
+
+/* Login Button */
+.login-btn {
+  background: #faf8f6;
+  color: #FFB800;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 6rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 20px;
   }
-  
-   
+
   .logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-left: 6rem;
+    margin-left: 2rem;
+    font-size: 22px;
   }
-  
- 
+
+  .login-btn {
+    margin-right: 2rem;
+  }
+
+  .search-box {
+    width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  .logo {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-box {
+    width: 100%;
+    max-width: 250px;
+    padding: 10px;
+  }
+
+  .login-btn {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 18px;
+  }
+
   .delivery-text {
     text-align: center;
-    display: flex;
-    flex-direction: column;
   }
-  
-  .deliver-to {
-    font-size: 14px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .location {
-    font-size: 16px;
-    font-weight: bold;
-    color: #ff6600;
-  }
-  
-  .address {
-    font-size: 14px;
-    color: #666;
-  }
-  
-   
+
   .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    
+    gap: 8px;
   }
-  
-  .search-box {
-    padding: 8px 15px;
-    border: none;
-    border-radius: 20px;
-    width: 140px;
-     
-  }
-  ::placeholder {
-    color: red;
-  
-  }
-  
+
+  .search-box,
   .login-btn {
-    background: #faf8f6;
-    color: #FFB800;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-right: 6rem;
+    width: 100%;
+    max-width: 200px;
   }
-  
+}

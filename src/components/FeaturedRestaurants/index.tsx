@@ -6,29 +6,33 @@ export default function FeaturedRestaurants() {
       <h2 className="text-2xl font-bold text-center mb-14">
         Featured Restaurants
       </h2>
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {restaurants.map((restaurant, index) => (
           <div
             key={index}
             className="bg-white shadow-lg rounded-xl overflow-hidden relative"
           >
+            {/* Discount Badge */}
             {restaurant.discount && (
-              <div className="absolute top-3 left-6 bg-orange-500 text-white text-xl px-2 py-1 rounded-lg w-30">
+              <div className="absolute top-3 left-4 bg-orange-500 text-white text-sm px-3 py-1 rounded-lg">
                 {restaurant.discount}
               </div>
             )}
+            {/* Fast Delivery Badge */}
             {restaurant.fast && (
-              <div className="absolute top-3 right-16 bg-yellow-400 text-white text-xl px-2 py-1 rounded-lg">
+              <div className="absolute top-3 right-4 bg-yellow-400 text-white text-sm px-3 py-1 rounded-lg">
                 Fast
               </div>
             )}
+            {/* Restaurant Image */}
             <Image
               src={restaurant.image}
               alt={restaurant.name}
               width={300}
-              height={5000}
-              className="w-full h-400 object-cover"
+              height={200}
+              className="w-full h-40 object-cover"
             />
+            {/* Restaurant Info */}
             <div className="p-4 text-center">
               <h3 className="font-bold text-lg">{restaurant.name}</h3>
               <div className="flex justify-center items-center text-sm mt-2">
@@ -36,11 +40,11 @@ export default function FeaturedRestaurants() {
                 <span className="ml-1">{restaurant.rating}</span>
               </div>
               <p
-                className={
+                className={`mt-2 ${
                   restaurant.status === "Open Now"
-                    ? "text-green-600 mt-2"
-                    : "text-red-500 mt-2"
-                }
+                    ? "text-green-600"
+                    : "text-red-500"
+                } font-semibold`}
               >
                 {restaurant.status}
               </p>
@@ -48,8 +52,9 @@ export default function FeaturedRestaurants() {
           </div>
         ))}
       </div>
-      <div className="flex justify-center items-center mt-14 ">
-        <button className="bg-yellow-400 text-white px-6 py-2 rounded-full shadow-lg text-lg font-semibold flex items-center gap-2 hover:bg-orange-500 transition duration-300">
+      {/* View All Button */}
+      <div className="flex justify-center items-center mt-10">
+        <button className="bg-yellow-400 text-white px-6 py-2 rounded-full shadow-lg text-lg font-semibold hover:bg-orange-500 transition duration-300">
           View All ➜
         </button>
       </div>
@@ -57,6 +62,7 @@ export default function FeaturedRestaurants() {
   );
 }
 
+// Restaurant Data
 const restaurants = [
   {
     image: "/images/food/fo.png",
@@ -72,46 +78,46 @@ const restaurants = [
   },
   {
     image: "/images/food/fth.png",
-    name: "Donuts hut",
+    name: "Donuts Delight",
     rating: "5.0",
     status: "Open Now",
   },
   {
     image: "/images/food/ff.png",
-    name: "Donuts hut",
-    rating: "5.0",
+    name: "Burger House",
+    rating: "4.8",
     status: "Open Now",
   },
   {
     image: "/images/food/ne.png",
-    name: "Donuts hut",
-    rating: "5.0",
+    name: "Tasty Treats",
+    rating: "4.9",
     status: "Open Now",
     discount: "10% off",
     fast: true,
   },
   {
     image: "/images/food/wo.png",
-    name: "Donuts hut",
-    rating: "5.0",
+    name: "Pizza Express",
+    rating: "4.7",
     status: "Open Now",
     discount: "25% off",
     fast: true,
   },
   {
     image: "/images/food/re.png",
-    name: "Donuts hut",
-    rating: "5.0",
+    name: "Grill & Chill",
+    rating: "4.5",
     status: "Open Now",
-    discount: "10% off",
+    discount: "15% off",
     fast: true,
   },
   {
     image: "/images/food/hr.png",
-    name: "Donuts hut",
-    rating: "5.0",
+    name: "Sweet Desserts",
+    rating: "4.9",
     status: "Open Now",
-    discount: "10% off",
+    discount: "20% off",
     fast: true,
   },
 ];
