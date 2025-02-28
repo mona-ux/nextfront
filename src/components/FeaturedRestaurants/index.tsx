@@ -53,7 +53,7 @@ export default function FeaturedRestaurants() {
         ))}
       </div>
       {/* View All Button */}
-      <div className="flex justify-center items-center mt-10">
+      <div className="flex justify-center items-center py-8 mt-10">
         <button className="bg-yellow-400 text-white px-6 py-2 rounded-full shadow-lg text-lg font-semibold hover:bg-orange-500 transition duration-300">
           View All ➜
         </button>

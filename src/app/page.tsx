@@ -1,10 +1,15 @@
 import Cards from "@/components/Cards";
+import { DailyDiscounts } from "@/components/DailyDiscounts";
 import FeaturedRestaurants from "@/components/FeaturedRestaurants";
-// import Counter from "@/components/Counter";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
+import { InstallApp } from "@/components/InstallApp";
 import Navbar from "@/components/Navbar";
+import Order from "@/components/Order";
 import PopularItems from "@/components/PopularItems";
+import SandwichDeal from "@/components/SandwichDeal";
+import { SearchFood } from "@/components/SearchFood";
 
  
 export default function Home() {
@@ -14,9 +19,14 @@ export default function Home() {
       <Hero/>
       <Cards/>
       <HowItWorks/>
-      {/* <Counter/> */}
       <PopularItems/>
       <FeaturedRestaurants/>
+      <SearchFood/>
+      <DailyDiscounts/>
+      <InstallApp/>
+      <SandwichDeal/>
+      <Order/>
+      <Footer/>
     </main>
   );
 }
